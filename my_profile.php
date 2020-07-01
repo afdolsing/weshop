@@ -13,7 +13,8 @@
     <div id="menu-profile">
         <ul>
             <li>
-                <a href="<?= BASE_URL."index.php?page=my_profile&module=category&action=list"; ?>">Category</a>
+                <a <?php if($module == "category") {echo "class='active'";} ?>
+                href="<?= BASE_URL."index.php?page=my_profile&module=category&action=list"; ?>">Category</a>
             </li>
             <li>
                 <a <?php if($module == "product") {echo "class='active'";} ?>
