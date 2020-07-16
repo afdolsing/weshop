@@ -30,16 +30,20 @@ body{
 
 #container #header #menu #user a {
     color: white;
-    padding-right: 5px;
+    padding: 5px;
     margin-top: 5px;
     display: inline-block;
     text-decoration: none;
+}
+#container #header #menu #user a:hover {
+ background: #227093;
+ border-radius: 2px;
 }
 
 #container #header #menu #btn-chart{
     float: right;
     background: orange;
-    padding: 2px 10px;
+    padding: 5px 10px;
     border-radius: 3px;
     text-decoration: none;
 }
@@ -66,7 +70,7 @@ body{
     overflow: hidden;
 }
 
-#container-user-access {
+.container-user-access {
     width: 350px;
     height: auto;
     margin: 50px auto;
@@ -105,7 +109,7 @@ body{
 }
 
 .element-form span input[type="submit"]:hover{
-	background:orange;
+	background:#4b7bec;
 }
 
 .notif {

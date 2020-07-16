@@ -10,7 +10,7 @@
         </div>
         <div class="element-form">
             <label>Phone Number</label>
-            <span><input type="text" name="name"></span>
+            <span><input type="text" name="phone"></span>
         </div>
         <div class="element-form">
             <label>Address</label>
@@ -25,7 +25,7 @@
             <span><input type="password" name="password2"></span>
         </div>
         <div class="element-form">
-            <span><button type="submit">Register</button></span>
+            <span><input type="submit" value="Register"></span>
         </div>
     </form>
 </div>
