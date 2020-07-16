@@ -1,3 +1,3 @@
 <?php
-    const BASE_URL = "http://localhost/github/weshop/";
+    const BASE_URL = "http://localhost/weshop/";
 

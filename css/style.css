@@ -119,6 +119,13 @@ body{
     margin-bottom: 10px;
     font-size: 11px;
 }
+.notif-require {
+    background:#ff7675;
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 11px;
+}
 
 #bg-page-profile {
     overflow: hidden;
