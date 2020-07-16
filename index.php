@@ -1,7 +1,8 @@
 <?php
 session_start();
 include("function/helper.php");
-
+include("function/connection.php");
+// cek apakah variabel page ada di url
 $page = isset($_GET['page']) ? $_GET['page'] : false;
 
 $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : false;
@@ -31,6 +32,7 @@ $level = isset($_SESSION['level']) ? $_SESSION['level'] : false;
                     <?php 
                         if($user_id){
                             echo "Hi <b>$name</b>, <a href='" . BASE_URL . "index.php?page=my_profile&module=order&action=list'>My Profile</a>";
+                            echo "<a href='". BASE_URL . "logout.php'>Logout</a>";
                         }else{
                             echo "<a href='". BASE_URL . "index.php?page=login'>Login</a>";
                             echo "<a href='". BASE_URL . "index.php?page=register'>Register</a>";

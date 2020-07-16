@@ -197,7 +197,7 @@ body{
     text-align: right;
 }
 
-#frame-tambah {
+#frame-add {
     margin-bottom: 10px;
     text-align: right;
 }
@@ -213,7 +213,7 @@ body{
     font-size: 9px;
 }
 
-.tombol-action:hover {
+.button-action:hover {
 	background:orange;
 }
 

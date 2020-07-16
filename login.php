@@ -1,5 +1,5 @@
 <?php
-    // jika sudah login -> $user_id ada di index 
+    // jika sudah login -> $user_id ada di index,hilangkan file register
     if($user_id){
         header("location:".BASE_URL);
     }
