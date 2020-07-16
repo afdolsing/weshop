@@ -39,5 +39,5 @@ if (empty($name) || empty($email) || empty($phone) || empty($address) || empty($
 }
 
 echo "add success";
-echo "<meta http-equiv='refresh'
-content='1; url=index.php?page=login'>";
+// echo "<meta http-equiv='refresh'
+// content='1; url=index.php?page=login'>";

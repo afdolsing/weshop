@@ -1,3 +1,10 @@
+<?php
+    // jika sudah login -> $user_id ada di index 
+    if($user_id){
+        header("location:".BASE_URL);
+    }
+?>
+
 <div class="container-user-access">
     <form action="<?= BASE_URL . "register_process.php" ?>" method="POST">
         <?php
