@@ -27,7 +27,6 @@ if ($product_id) {
                     while($row = mysqli_fetch_assoc($query)){
                         echo "<option value='$row[kategori]'>$row[kategori]</option>";
                     }
-                    
                 ?>
             </select>
         </span>
