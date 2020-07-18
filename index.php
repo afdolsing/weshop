@@ -46,7 +46,7 @@ $level = isset($_SESSION['level']) ? $_SESSION['level'] : false;
         </div>
         <div id="content">
             <?php
-                // ambil content page dari url. misal : login, register dll
+                // ambil content page dari url. misal : login, register, my_profile dll
                 $fileName = "$page.php";
                 // cek file. jika ada atau nilai 1 , include kan
                 if(file_exists($fileName)){

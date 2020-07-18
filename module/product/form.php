@@ -30,8 +30,10 @@ if ($productId) {
 
     $button = "Update";    
 }
-
 ?>
+
+<script src="<?= BASE_URL . "js/ckeditor/ckeditor.js"?>"></script>
+
 <form action="<?php echo BASE_URL . "module/product/action.php?product_id=$productId" ?>" method="POST" enctype="multipart/form-data">
     <div class="element-form">
         <label>Category</label>
@@ -55,9 +57,9 @@ if ($productId) {
         <label>Product Name</label>
         <span><input type="text" name="product_name" value="<?= $productName ?>" /></span>
     </div>
-    <div class="element-form">
-        <label>Specification</label>
-        <span><textarea name="specification" rows="10"><?= $specification ?></textarea></span>
+    <div style="margin-bottom:10px">
+        <label style="font-weight:bold">Specification</label>
+        <span><textarea name="specification" id="editor" rows="10"><?= $specification ?></textarea></span>
     </div>
     <div class="element-form">
         <label>Stock</label>
@@ -89,3 +91,7 @@ if ($productId) {
     </div>
 
 </form>
+
+<script>
+    CKEDITOR.replace("editor");
+</script>
