@@ -17,7 +17,7 @@ if(mysqli_num_rows($query) == 1){
         $_SESSION['user_id'] = $row['user_id'];
         $_SESSION['name'] = $row['nama'];
         $_SESSION['level'] = $row['level'];
-        header("location:" . BASE_URL . "index.php?page=my_profile&module=order&action=list");
+        header("location:" . BASE_URL . "index.php?page=my_profile&module=orders&action=list");
     }else{
         header("location:" . BASE_URL . "index.php?page=login&notif=true");
     }

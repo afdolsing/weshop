@@ -27,17 +27,17 @@ if (empty($name) || empty($email) || empty($phone) || empty($address) || empty($
 } elseif ($password != $password2) {
         header("location:" . BASE_URL . "index.php?page=register&notif=password&$dataForm");
 } else {
-        $password_hash = password_hash($password, PASSWORD_DEFAULT);
+        $passwordHash = password_hash($password, PASSWORD_DEFAULT);
         mysqli_query($conn, "INSERT INTO user SET 
                 level = '$level',
                 nama = '$name',
                 email = '$email',
                 alamat = '$address',
                 phone = '$phone',
-                password = '$password_hash',
+                password = '$passwordHash',
                 status = '$status'");
 }
 
 echo "add success";
-// echo "<meta http-equiv='refresh'
-// content='1; url=index.php?page=login'>";
+echo "<meta http-equiv='refresh'
+content='1; url=index.php?page=login'>";

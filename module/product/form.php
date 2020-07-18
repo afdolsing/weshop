@@ -1,36 +1,75 @@
 <?php
+// ambil product_id dari url untuk di edit
+$productId = isset($_GET['product_id']) ? $_GET['product_id'] : false;
 
-$product_id = isset($_GET['product_id']) ? $_GET['product_id'] : false;
-
-$product = "";
+$productName = "";
+$categoryId = "";
+$specification = "";
+$image = "";
+$stock = "";
+$price = "";
 $status = "";
-$button = "Add";
-
-if ($product_id) {
-    $query = mysqli_query($conn, "SELECT * FROM barang WHERE barang_id='$product_id'");
+$setImage = "";
+// kirim button Add ke action.php dan exit
+$button = "Add"; 
+// jika ada product id di url -> ganti button menjadi update dan kirim ke action.php
+if ($productId) {
+    $query = mysqli_query($conn, "SELECT * FROM barang WHERE barang_id='$productId'");
     $row = mysqli_fetch_assoc($query);
-
-    $category = $row['kategori'];
+    // dibawah ini produk yang akan diganti
+    $productName = $row['nama_barang'];
+    $categoryId = $row['kategori_id'];
+    $specification = $row['spesifikasi'];
+    $image = $row['gambar'];
+    $price = $row['harga'];
+    $stock = $row['stok'];
     $status = $row['status'];
-    $button = "Update";
+    // ambil image dan tambahkan inline style css
+    $image = "<img src='". BASE_URL . "images/products/$image' style='height: 200px;' >";
+    $setImage = "(click choose file, if you want to change this image)";
+
+    $button = "Update";    
 }
 
 ?>
-<form action="<?php echo BASE_URL . "module/category/action.php?product_id=$product_id"; ?>" method="POST">
-
+<form action="<?php echo BASE_URL . "module/product/action.php?product_id=$productId" ?>" method="POST" enctype="multipart/form-data">
     <div class="element-form">
-        <label>Product</label>
+        <label>Category</label>
         <span>
             <select name="category_id">
                 <?php 
-                    $query = mysqli_query($conn, "SELECT * FROM kategori WHERE status = 'on'");
+                    $query = mysqli_query($conn, "SELECT kategori_id, kategori FROM kategori WHERE status = 'on' ORDER BY kategori ASC");
                     while($row = mysqli_fetch_assoc($query)){
-                        echo "<option value='$row[kategori]'>$row[kategori]</option>";
+                        if($categoryId == $row['kategori_id']){
+                            echo "<option value='$row[kategori_id]' selected='true'>$row[kategori]</option>";
+                        }else{
+                            echo "<option value='$row[kategori_id]'>$row[kategori]</option>";
+                        }
                     }
                 ?>
             </select>
         </span>
 
+    </div>
+    <div class="element-form">
+        <label>Product Name</label>
+        <span><input type="text" name="product_name" value="<?= $productName ?>" /></span>
+    </div>
+    <div class="element-form">
+        <label>Specification</label>
+        <span><textarea name="specification" rows="10"><?= $specification ?></textarea></span>
+    </div>
+    <div class="element-form">
+        <label>Stock</label>
+        <span><input type="text" name="stock" value="<?= $stock ?>" /></span>
+    </div>
+    <div class="element-form">
+        <label>Price</label>
+        <span><input type="text" name="price" value="<?= $price ?>" /></span>
+    </div>
+    <div class="element-form">
+        <label>Image <?= $setImage ?></label>
+        <span><input type="file" name="file_image"/><?= $image ?></span>
     </div>
 
     <div class="element-form">

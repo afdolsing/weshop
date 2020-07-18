@@ -1,6 +1,6 @@
 <?php
     // jika sudah login -> $user_id ada di index , hilangkan file register
-    if($user_id){
+    if($userId){
         header("location:".BASE_URL);
     }
 ?>
@@ -8,8 +8,8 @@
 <div class="container-user-access">
     <form action="<?= BASE_URL . "register_process.php" ?>" method="POST">
         <?php
-            // field yang di isi ke register 
             $notif = isset($_GET['notif']) ? $_GET['notif'] : false;
+             // field yang di isi ke register 
             $name = isset($_GET['name']) ? $_GET['name'] : false;
             $email = isset($_GET['email']) ? $_GET['email'] : false;
             $phone = isset($_GET['phone']) ? $_GET['phone'] : false;

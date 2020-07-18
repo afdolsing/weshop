@@ -1,13 +1,13 @@
 <?php
 
-$category_id = isset($_GET['category_id']) ? $_GET['category_id'] : false;
+$categoryId = isset($_GET['category_id']) ? $_GET['category_id'] : false;
 
 $category = "";
 $status = "";
 $button = "Add";
 
-if ($category_id) {
-    $queryCategory = mysqli_query($conn, "SELECT * FROM kategori WHERE kategori_id='$category_id'");
+if ($categoryId) {
+    $queryCategory = mysqli_query($conn, "SELECT * FROM kategori WHERE kategori_id='$categoryId'");
     $row = mysqli_fetch_assoc($queryCategory);
 
     $category = $row['kategori'];
@@ -16,7 +16,7 @@ if ($category_id) {
 }
 
 ?>
-<form action="<?php echo BASE_URL . "module/category/action.php?category_id=$category_id"; ?>" method="POST">
+<form action="<?php echo BASE_URL . "module/category/action.php?category_id=$categoryId"; ?>" method="POST">
 
     <div class="element-form">
         <label>Category</label>

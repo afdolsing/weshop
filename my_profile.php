@@ -1,6 +1,6 @@
 <?php 
     // jika sudah login
-    if($user_id){
+    if($userId){
         $module = isset($_GET['module']) ? $_GET['module'] : false;
         $action = isset($_GET['action']) ? $_GET['action'] : false;
         $mode = isset($_GET['mode']) ? $_GET['mode'] : false;
@@ -9,6 +9,7 @@
         header("location:".BASE_URL."index.php?page=login");
     }
 ?>
+<!-- semua transaksi ada di file ini -->
 <div id="bg-page-profile">
     <div id="menu-profile">
         <ul>

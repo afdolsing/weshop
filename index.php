@@ -5,7 +5,7 @@ include("function/connection.php");
 // cek apakah variabel page ada di url
 $page = isset($_GET['page']) ? $_GET['page'] : false;
 
-$user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : false;
+$userId = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : false;
 $name = isset($_SESSION['name']) ? $_SESSION['name'] : false;
 $level = isset($_SESSION['level']) ? $_SESSION['level'] : false;
 
@@ -30,7 +30,7 @@ $level = isset($_SESSION['level']) ? $_SESSION['level'] : false;
             <div id="menu">
                 <div id="user">
                     <?php 
-                        if($user_id){
+                        if($userId){
                             echo "Hi <b>$name</b>, <a href='" . BASE_URL . "index.php?page=my_profile&module=orders&action=list'>My Profile</a>";
                             echo "<a href='". BASE_URL . "logout.php'>Logout</a>";
                         }else{
@@ -45,14 +45,15 @@ $level = isset($_SESSION['level']) ? $_SESSION['level'] : false;
             </div>
         </div>
         <div id="content">
-            <?php 
-            $filename = "$page.php";
-
-            if(file_exists($filename)){
-                include($filename);
-            }else{
-                echo "page not found";
-            }
+            <?php
+                // ambil content page dari url. misal : login, register dll
+                $fileName = "$page.php";
+                // cek file. jika ada atau nilai 1 , include kan
+                if(file_exists($fileName)){
+                    include($fileName);
+                }else{
+                    echo "page not found";
+                }
             ?>
         </div>
         <div id="footer">
