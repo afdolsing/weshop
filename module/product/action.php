@@ -1,7 +1,8 @@
 <?php
     include("../../function/connection.php");   
     include("../../function/helper.php");   
-     
+    
+    	// ambil data dari form
     $productName = $_POST['product_name'];
     $categoryId   = $_POST['category_id'];
     $specification = $_POST['specification'];

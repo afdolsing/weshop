@@ -2,6 +2,7 @@
     include("../../function/connection.php");   
     include("../../function/helper.php");   
      
+   	// ambil data dari form 
     $category = $_POST['category'];
     $status = $_POST['status'];
     $button = $_POST['button'];

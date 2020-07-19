@@ -59,7 +59,7 @@ if ($productId) {
     </div>
     <div style="margin-bottom:10px">
         <label style="font-weight:bold">Specification</label>
-        <span><textarea name="specification" id="editor" rows="10"><?= $specification ?></textarea></span>
+        <span><textarea name="specification" id="spec_edit"><?= $specification ?></textarea></span>
     </div>
     <div class="element-form">
         <label>Stock</label>
@@ -93,5 +93,5 @@ if ($productId) {
 </form>
 
 <script>
-    CKEDITOR.replace("editor");
+    CKEDITOR.replace("spec_edit");
 </script>
