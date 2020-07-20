@@ -4,6 +4,7 @@ include("function/helper.php");
 include("function/connection.php");
 // cek apakah variabel page ada di url
 $page = isset($_GET['page']) ? $_GET['page'] : false;
+$categoryId = isset($_GET['category_id']) ? $_GET['category_id'] : false;
 
 $userId = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : false;
 $name = isset($_SESSION['name']) ? $_SESSION['name'] : false;
@@ -52,7 +53,7 @@ $level = isset($_SESSION['level']) ? $_SESSION['level'] : false;
                 if(file_exists($fileName)){
                     include($fileName);
                 }else{
-                    echo "page not found";
+                    include("main.php");
                 }
             ?>
         </div>

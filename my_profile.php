@@ -12,30 +12,33 @@
 <!-- semua transaksi ada di file ini -->
 <div id="bg-page-profile">
     <div id="menu-profile">
-        <ul>
-            <li>
-                <a <?php if($module == "category") {echo "class='active'";} ?>
-                href="<?= BASE_URL."index.php?page=my_profile&module=category&action=list"; ?>">Category</a>
-            </li>
-            <li>
-                <a <?php if($module == "product") {echo "class='active'";} ?>
-                href="<?= BASE_URL."index.php?page=my_profile&module=product&action=list"; ?>">Product</a>
-            </li>
-            <li>
-                <a <?php if($module == "city") {echo "class='active'";} ?>
-                href="<?= BASE_URL."index.php?page=my_profile&module=city&action=list"; ?>">City</a>
-            </li>
-            <li>
-                <a <?php if($module == "user") {echo "class='active'";} ?>
-                href="<?= BASE_URL."index.php?page=my_profile&module=user&action=list"; ?>">User</a>
-            </li>
-            <li>
-                <a <?php if($module == "banner") {echo "class='active'";} ?>
-                href="<?= BASE_URL."index.php?page=my_profile&module=banner&action=list"; ?>">Banner</a>
-            </li>
+        <ul><?php
+                // ambil level dari index
+                if($level == "superadmin") : ?>
+                    <li>
+                        <a <?php if($module == "category") {echo "class='active'";} ?>
+                        href="<?= BASE_URL."index.php?page=my_profile&module=category&action=list" ?>">Category</a>
+                    </li>
+                    <li>
+                        <a <?php if($module == "product") {echo "class='active'";} ?>
+                        href="<?= BASE_URL."index.php?page=my_profile&module=product&action=list" ?>">Product</a>
+                    </li>
+                    <li>
+                        <a <?php if($module == "city") {echo "class='active'";} ?>
+                        href="<?= BASE_URL."index.php?page=my_profile&module=city&action=list" ?>">City</a>
+                    </li>
+                    <li>
+                        <a <?php if($module == "user") {echo "class='active'";} ?>
+                        href="<?= BASE_URL."index.php?page=my_profile&module=user&action=list" ?>">User</a>
+                    </li>
+                    <li>
+                        <a <?php if($module == "banner") {echo "class='active'";} ?>
+                        href="<?= BASE_URL."index.php?page=my_profile&module=banner&action=list" ?>">Banner</a>
+                    </li>
+            <?php endif ?>
             <li>
                 <a <?php if($module == "orders") {echo "class='active'";} ?>
-                href="<?= BASE_URL."index.php?page=my_profile&module=orders&action=list"; ?>">Orders</a>
+                href="<?= BASE_URL."index.php?page=my_profile&module=orders&action=list" ?>">Orders</a>
             </li>
         </ul>
     </div>
