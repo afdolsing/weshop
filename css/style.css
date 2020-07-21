@@ -261,11 +261,11 @@ body{
 }
 
 #right #frame-product ul li {
-    width: 230px;
+    width: 240px;
     background: white;
     padding: 10px 15px;
     margin-bottom: 15px;
-    margin-right: 20px;
+    margin-right: 15px;
     float: left;
 }
 
@@ -278,7 +278,7 @@ body{
 
 #right #frame-product ul li a img {
     display: block;
-    width: 200px;
+    width: 240px;
 }
 
 #right #frame-product ul li .caption {

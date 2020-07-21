@@ -20,6 +20,10 @@ $level = isset($_SESSION['level']) ? $_SESSION['level'] : false;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>weshop | the online shop</title>
     <link rel="stylesheet" href="<?= BASE_URL . "css/style.css" ?>">
+    <link rel="stylesheet" href="<?= BASE_URL . "css/banner.css" ?>">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slidesjs/3.0/jquery.slides.min.js"></script>
 </head>
 
 <body>
@@ -62,5 +66,17 @@ $level = isset($_SESSION['level']) ? $_SESSION['level'] : false;
         </div>
     </div>
 </body>
+<script>
+		$(function() {
+			$('#slides').slidesjs({
+				height: 350,
+				play: { auto : true,
+					    interval : 3000
+					  },
+				navigation : false
+			});
+		});
+		</script>		
+		
 
 </html>

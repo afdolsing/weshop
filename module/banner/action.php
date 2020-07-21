@@ -30,7 +30,7 @@
         mysqli_query($conn, "UPDATE banner SET banner='$banner',
                                         link='$link',
                                         status='$status'
-										$edit_gambar WHERE banner_id='$bannerId'");
+										$editImage WHERE banner_id='$bannerId'");
     }
      
      
