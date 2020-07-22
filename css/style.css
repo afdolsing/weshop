@@ -330,27 +330,28 @@ body{
     margin-top: 0px;
 }
 
-#detail-product #frame-gambar {
+#detail-product #frame-image {
     background: #FBFBFB;
     padding: 20px;
 }
 
-#detail-product #frame-gambar img {
+#detail-product #frame-image img {
+    height: 400px;
     display: block;
     margin: 0px auto;
 }
 
-#detail-product #frame-harga {
+#detail-product #frame-price {
     margin: 15px 0px;
 }
 
-#detail-product #frame-harga span {
+#detail-product #frame-price span {
     font-size: 15px;
     font-weight: bold;
     color: red;
 }
 
-#detail-product #frame-harga a {
+#detail-product #frame-price a {
     background: #1e5474;
     color: white;
     text-decoration: none;
@@ -360,15 +361,15 @@ body{
     border-radius: 3px;
 }
 
-#detail-product #frame-harga a:hover {
+#detail-product #frame-price a:hover {
     background:orange;
 }
 
-#detail-product #keterangan {
+#detail-product #caption {
     margin: 20px 0px;
 }
 
-.total-barang {
+.total-shopping {
     color: white;
     text-decoration: none;
     font-size: 10px;

@@ -1,20 +1,7 @@
 <div id="left">
-    <duv id="menu-category">
-        <ul>
-            <?php 
-                $query = mysqli_query($conn, "SELECT * FROM kategori WHERE status='on'");
-
-                while($row = mysqli_fetch_assoc($query)){
-                    if($categoryId == $row['kategori_id']){
-                        echo "<li><a href='" . BASE_URL . "index.php?category_id=$row[kategori_id]' class='active'>$row[kategori]</a></li>";
-                    } else{
-                        echo "<li><a href='" . BASE_URL . "index.php?category_id=$row[kategori_id]'>$row[kategori]</a></li>";
-                    }
-                    
-                }
-            ?>
-        </ul>
-    </duv>
+    <?php 
+        echo category($categoryId);
+    ?>
 </div>
 <div id="right">
     <div id="slides">

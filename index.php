@@ -5,10 +5,19 @@ include("function/connection.php");
 // cek apakah variabel page ada di url
 $page = isset($_GET['page']) ? $_GET['page'] : false;
 $categoryId = isset($_GET['category_id']) ? $_GET['category_id'] : false;
-
+// keluarkan session user
 $userId = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : false;
 $name = isset($_SESSION['name']) ? $_SESSION['name'] : false;
 $level = isset($_SESSION['level']) ? $_SESSION['level'] : false;
+// tambahkan ke keranjang
+$shoppingCart = isset($_SESSION['shopping_cart']) ? $_SESSION['shopping_cart'] : false;
+// hitung total belanja
+if($shoppingCart > 1){
+    $totalShopping = count($shoppingCart);  
+}else{
+    $totalShopping = 0;
+}
+
 
 ?>
 
@@ -46,6 +55,11 @@ $level = isset($_SESSION['level']) ? $_SESSION['level'] : false;
                 </div>
                 <a href="<?= BASE_URL . "index.php?page=cart" ?>" id="btn-chart">
                     <img src="<?= BASE_URL . "images/cart.png" ?>">
+                    <?php
+                        if($totalShopping != 0){
+                            echo "<span class='total-shopping'>$totalShopping</span>";
+                        }
+                    ?>
                 </a>
             </div>
         </div>
