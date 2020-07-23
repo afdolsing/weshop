@@ -1,7 +1,7 @@
 <?php
 
-require("function/connection.php");
-include("function/helper.php");
+require "function/connection.php";
+require "function/helper.php";
 
 $email = $_POST['email'];
 $password = $_POST['password'];

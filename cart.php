@@ -32,7 +32,7 @@
 					<td class='kiri'>$productName</td>
 					<td class='tengah'><input type='number' name='$productId' value='$quantity' class='update-quantity' /></td>
 					<td class='kanan'>".rupiah($price)."</td>
-					<td class='kanan hapus_item'>".rupiah($total)." <a href='".BASE_URL."remove_item.php?product_id=$productId'>X</a></td>
+					<td class='kanan hapus_item'>".rupiah($total)." <a href='".BASE_URL."cart_remove_item.php?product_id=$productId'>X</a></td>
 				</tr>";
 				
             $no++;
@@ -46,7 +46,7 @@
 	
 		echo "<div id='frame-button-keranjang'>
 				<a id='lanjut-belanja' href='".BASE_URL."index.php'>Shopping Again</a>
-				<a id='lanjut-pemesanan' href='".BASE_URL."index.php?page=data_order'>Next Order</a>
+				<a id='lanjut-pemesanan' href='".BASE_URL."index.php?page=order'>Next Order</a>
 			  </div>";
 
     }
@@ -54,14 +54,13 @@
 ?>
 
 <script>
-
 	$(".update-quantity").on("input", function(e){
 		let productId = $(this).attr("name");
 		let value = $(this).val();
 		
 		$.ajax({
 			method: "POST",
-			url: "update_cart.php",
+			url: "cart_update_quantity.php",
 			data: "product_id="+productId+"&value="+value
 		})
 		.done(function(data){
@@ -69,5 +68,4 @@
 		});
 		
 	});
-
 </script>

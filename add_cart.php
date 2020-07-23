@@ -2,6 +2,7 @@
     // karena file add_cart ini berdiri sendiri, tidak berada dalam index.php maka untuk koneksi membutuhkan file koneksi
     require "function/connection.php";
     require "function/helper.php";
+    // file add_cart terpanggil dari file main.php & detail.php
 
     session_start();
     // tangkap productId yang dikirim melalui url

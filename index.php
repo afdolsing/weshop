@@ -1,7 +1,7 @@
 <?php
 session_start();
-include("function/helper.php");
-require("function/connection.php");
+require "function/helper.php";
+require "function/connection.php";
 // cek apakah variabel page ada di url
 $page = isset($_GET['page']) ? $_GET['page'] : false;
 $categoryId = isset($_GET['category_id']) ? $_GET['category_id'] : false;

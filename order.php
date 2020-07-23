@@ -14,7 +14,7 @@
 	
 	<div id="frame-form-pengiriman">
 	
-		<form action="<?php echo BASE_URL."process_order.php"; ?>" method="POST">
+		<form action="<?php echo BASE_URL."order_process.php"; ?>" method="POST">
 		
 			<div class="element-form">
 				<label>Recipient Name</label>
