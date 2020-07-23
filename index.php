@@ -1,7 +1,7 @@
 <?php
 session_start();
 include("function/helper.php");
-include("function/connection.php");
+require("function/connection.php");
 // cek apakah variabel page ada di url
 $page = isset($_GET['page']) ? $_GET['page'] : false;
 $categoryId = isset($_GET['category_id']) ? $_GET['category_id'] : false;
@@ -10,13 +10,10 @@ $userId = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : false;
 $name = isset($_SESSION['name']) ? $_SESSION['name'] : false;
 $level = isset($_SESSION['level']) ? $_SESSION['level'] : false;
 // tambahkan ke keranjang
-$shoppingCart = isset($_SESSION['shopping_cart']) ? $_SESSION['shopping_cart'] : false;
+$shoppingCart = isset($_SESSION['shopping_cart']) ? $_SESSION['shopping_cart'] : array();
 // hitung total belanja
-if($shoppingCart > 1){
-    $totalShopping = count($shoppingCart);  
-}else{
-    $totalShopping = 0;
-}
+$totalShopping = count($shoppingCart);  
+
 
 
 ?>
