@@ -41,7 +41,7 @@
 
         // hapus session keranjang jika sudah selesai semua
         unset($_SESSION["shopping_cart"]);
-		
-		header("location:".BASE_URL."index.php?page=my_profile&module=order&action=detail&order_id=$lastOrderId");
+		// kirim ke module orders
+		header("location:".BASE_URL."index.php?page=my_profile&module=orders&action=detail&order_id=$lastOrderId");
     }
 ?>

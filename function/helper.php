@@ -1,7 +1,10 @@
 <?php
     const BASE_URL = "http://localhost/weshop/";
     
-
+    $arrayOrderStatus[0] = "waiting for payment";
+    $arrayOrderStatus[1] = "payment is being validated";
+    $arrayOrderStatus[2] = "paid out";
+    $arrayOrderStatus[3] = "payment declined";
     // fungsi untuk membuat koma di kolom harga
     function rupiah($defaultPrice = 0){
         $string = "Rp." . number_format($defaultPrice);

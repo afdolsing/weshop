@@ -14,7 +14,7 @@
                 </tr>";
 
         $subtotal = 0;
-        // keluarkan data-data dari dalam 		
+        // keluarkan data-data dari dalam array		
 		foreach($shoppingCart AS $key => $value){
 			$productId = $key;
 			

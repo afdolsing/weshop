@@ -38,6 +38,5 @@ if (empty($name) || empty($email) || empty($phone) || empty($address) || empty($
                 status = '$status'");
 }
 
-echo "add success";
-echo "<meta http-equiv='refresh'
-content='1; url=index.php?page=login'>";
+echo "<scrip>alert('add success')</script>";
+header("location:" . BASE_URL . "index.php?page=login&notif=true");
