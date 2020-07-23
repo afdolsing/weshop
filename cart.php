@@ -23,7 +23,13 @@
 			$image = $value["image"];
             $price = $value["price"];
             
-            $total = $quantity * $price;
+			$total = $quantity;
+			if($total > 0){
+				$total = $quantity * $price;
+			}else if($total < 1 || $total = null){
+				$total = 0;
+			}
+				
             $subtotal = $subtotal + $total;
 			
 			echo "<tr>
