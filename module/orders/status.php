@@ -10,7 +10,8 @@
 <form action="<?php echo BASE_URL."module/orders/action.php?order_id=$orderId"; ?>" method="POST">
 	 
 	<div class="element-form">
-		<label>Pesanan Id (Faktur Id)</label>    
+		<label>Orders Id (Faktur Id)</label>
+		<!-- agar nomor order tidak diubah2 tambahkan readonly=true     -->
 		<span><input type="text" value="<?php echo $orderId; ?>" name="pesanan_id" readonly="true" /></span>
 	</div>  
 
@@ -19,7 +20,7 @@
 		<span>
 			<select name="status">
 				<?php
-				
+					// ambil arrayOrderStatus dari file helper.php
 					foreach($arrayOrderStatus AS $key => $value){
 						if($status == $key){
 							echo "<option value='$key' selected='true'>$value</option>";
@@ -28,7 +29,6 @@
 							echo "<option value='$key'>$value</option>";
 						}
 					}
-				
 				?>
 			</select>
 		</span>

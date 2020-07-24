@@ -13,9 +13,9 @@ else{
 
     echo "<table class='table-list'>
             <tr class='baris-title'>
-                <th class='kiri'>Nomor Pesanan</th>
+                <th class='kiri'>Order Number</th>
                 <th class='kiri'>Status</th>
-                <th class='kiri'>Nama</th>
+                <th class='kiri'>Name</th>
                 <th class='kiri'>Action</th>
             </tr>";
     

@@ -14,8 +14,6 @@ $shoppingCart = isset($_SESSION['shopping_cart']) ? $_SESSION['shopping_cart'] :
 // hitung total belanja
 $totalShopping = count($shoppingCart);  
 
-
-
 ?>
 
 <!DOCTYPE html>
@@ -78,16 +76,15 @@ $totalShopping = count($shoppingCart);
     </div>
 </body>
 <script>
-		$(function() {
-			$('#slides').slidesjs({
-				height: 350,
-				play: { auto : true,
-					    interval : 3000
-					  },
-				navigation : false
-			});
-		});
-		</script>		
+$(function() {
+    $('#slides').slidesjs({
+        height: 350,
+        play: { auto : true,
+                interval : 3000
+                },
+        navigation : false
+    });
+});
+</script>		
 		
-
 </html>
