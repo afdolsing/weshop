@@ -32,7 +32,8 @@ if ($productId) {
 }
 ?>
 <!-- gunakan library ckeditor untuk edit spesifikasi -->
-<script src="https://cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
+<script src="https://cdn.ckeditor.com/4.14.1/basic/ckeditor.js"></script>
+
 
 <form action="<?php echo BASE_URL . "module/product/action.php?product_id=$productId" ?>" method="POST" enctype="multipart/form-data">
     <div class="element-form">

@@ -1,6 +1,6 @@
 <?php
-    include("../../function/connection.php");   
-    include("../../function/helper.php");   
+    require "../../function/connection.php";   
+    require "../../function/helper.php";   
      
     $userId = $_GET['user_id'];
 	// ambil data dari form

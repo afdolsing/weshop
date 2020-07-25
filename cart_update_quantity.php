@@ -1,5 +1,4 @@
 <?php
-
     session_start();
 
     $shoppingCart = $_SESSION['shopping_cart'];

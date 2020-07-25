@@ -4,10 +4,13 @@
         $module = isset($_GET['module']) ? $_GET['module'] : false;
         $action = isset($_GET['action']) ? $_GET['action'] : false;
         $mode = isset($_GET['mode']) ? $_GET['mode'] : false;
+
     }else{
         // jika belum login, kembalikan ke login
         header("location:".BASE_URL."index.php?page=login");
     }
+    // cek function/helper.php
+    adminOnly($module, $level);
 ?>
 <!-- semua transaksi ada di file ini -->
 <div id="bg-page-profile">
@@ -43,11 +46,12 @@
         </ul>
     </div>
     <div id="profile-content">
-        <?php 
+        <?php
+
             $file = "module/$module/$action.php";
             if(file_exists($file)){
                 include($file);
-            }else{
+            } else{
                 echo "<h3>Sorry, page not found</h3>";
             }
         ?>
