@@ -7,6 +7,6 @@
 
 • Lihat, praktek, sukses.
 
-• Coba Metode Studi Kasus GRATIS bikin kalkulator dari nol bit.ly/2u9Q78D
+• Coba Metode Studi Kasus GRATIS bikin kalkulator dari nol https://bit.ly/2u9Q78D
 
 
