@@ -4,6 +4,7 @@
 
 # read
 • Di wegodev materinya to the point dan terstruktur, jadi gak bikin pusing otak kamu.
+
 • Lihat, praktek, sukses.
 
 
